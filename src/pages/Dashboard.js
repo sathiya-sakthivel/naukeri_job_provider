@@ -1,32 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "../components/ui/card";
 import { FaBriefcase, FaUsers, FaUserTie, FaFileAlt } from "react-icons/fa";
 
-// Dummy data (replace with your backend data)
-const dummyJobs = [
-  {
-    id: 1,
-    title: "Frontend Developer",
-    category: "IT",
-    applications: [
-      { id: 1, name: "Alice", email: "alice@example.com" },
-      { id: 2, name: "Bob", email: "bob@example.com" },
-    ],
-    status: "Active",
-  },
-  {
-    id: 2,
-    title: "Data Analyst",
-    category: "Finance",
-    applications: [{ id: 3, name: "Charlie", email: "charlie@example.com" }],
-    status: "Closed",
-  },
-];
-
 function DashboardEmployer() {
-  const [jobs, setJobs] = useState(dummyJobs);
+  const [jobs, setJobs] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
   const [showModal, setShowModal] = useState(false);
+
+  // ✅ Simulate fetching jobs (replace with API later)
+  useEffect(() => {
+    const dummyJobs = [
+      {
+        id: 1,
+        title: "Frontend Developer",
+        category: "IT",
+        applications: [
+          { id: 1, name: "Alice", email: "alice@example.com" },
+          { id: 2, name: "Bob", email: "bob@example.com" },
+        ],
+        status: "Active",
+      },
+      {
+        id: 2,
+        title: "Data Analyst",
+        category: "Finance",
+        applications: [
+          { id: 3, name: "Charlie", email: "charlie@example.com" },
+        ],
+        status: "Closed",
+      },
+    ];
+    setJobs(dummyJobs);
+  }, []);
 
   const stats = [
     { title: "Total Jobs", value: jobs.length, icon: <FaBriefcase size={24} />, bg: "bg-purple-500", color: "text-white" },

@@ -1,3 +1,10 @@
+/* Disabled button styling */
+button:disabled {
+  color: black;              /* Keep text readable */
+  background-color: #f0f0f0; /* Light background */
+  opacity: 1 !important;     /* Override default faded look */
+  cursor: not-allowed;       /* Show blocked cursor */
+}
 .App {
   text-align: center;
 }
@@ -35,4 +42,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+button:disabled {
+  color: black;   /* Text color */
+  background-color: #f0f0f0;
+  opacity: 1;
+  cursor: not-allowed;
 }

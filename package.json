@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "react-scripts": "^5.0.1"
-=======
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +19,7 @@
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.8.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "recharts": "^3.1.2",
     "tailwind-variants": "^2.1.0",
     "tailwindcss": "^4.1.12",
@@ -52,6 +48,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
->>>>>>> c824b8a5b7ec69c833dc6f806fce6591c74bec2f
   }
 }
